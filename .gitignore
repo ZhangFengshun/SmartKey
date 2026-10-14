@@ -1,0 +1,46 @@
+# Local runtime, build caches and outputs
+.toolchain/
+.gradle/
+.kotlin/
+**/build/
+**/.cxx/
+local.properties
+
+# Credentials and signing material
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+credentials*.json
+secrets*.json
+
+# Private screenshots, historical artifacts and release binaries
+.archive/
+dist/
+screenshots/reference/
+screenshots/validation/
+screenshots/private/
+phone-*.png
+*.apk
+*.aab
+*.log
+*.hprof
+
+# Local publishing staging and editor/cache files
+.github-ready/
+SmartKey-source-*.zip
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Internal progress notes are not publishing documentation
+/PLAN.md
+/PROJECT_STATUS.md
+/TASK_BOARD.md

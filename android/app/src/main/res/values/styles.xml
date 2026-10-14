@@ -1,0 +1,20 @@
+<resources>
+    <style name="BaseAppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#6170F8</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#EEEFFF</item>
+        <item name="android:navigationBarColor">#F7F7FC</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="AppTheme" parent="BaseAppTheme" />
+    <style name="KeyboardImageTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <string name="app_name">SmartKey</string>
+    <string name="keyboard_language">中文全拼 / English</string>
+</resources>

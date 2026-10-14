@@ -1,0 +1,17 @@
+<resources>
+    <item name="source_text" type="id" />
+    <item name="context_text" type="id" />
+    <item name="sandbox_editor" type="id" />
+    <item name="sandbox_send_status" type="id" />
+    <item name="password_editor" type="id" />
+    <item name="base_url" type="id" />
+    <item name="model_name" type="id" />
+    <item name="api_key" type="id" />
+    <item name="generate_button" type="id" />
+    <item name="generation_status" type="id" />
+    <item name="model_catalog_status" type="id" />
+    <item name="choose_model" type="id" />
+    <item name="refresh_models" type="id" />
+    <item name="model_search" type="id" />
+    <item name="model_catalog_list" type="id" />
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="dev.lovekey.open.ui.MainActivity"
+    android:supportsSwitchingToNextInputMethod="true">
+    <subtype android:label="@string/keyboard_language" android:imeSubtypeLocale="zh_CN" android:imeSubtypeMode="keyboard" />
+</input-method>

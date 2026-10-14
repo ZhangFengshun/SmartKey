@@ -1,0 +1,17 @@
+# 测试指南
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File tools/build.ps1 :app:testDebugUnitTest :app:assembleDebugAndroidTest
+```
+
+JVM测试不需要真实凭证。Android套件位于android/app/src/androidTest，使用AndroidJUnitRunner。存储测试会修改测试设备配置，按用例说明隔离运行；不在个人常用设备上直接执行全部套件。
+
+## 手机UI回归
+
+需要Python、uiautomator2和在线Android设备。ANDROID_SERIAL可指定设备，不设置时使用工具默认发现。ADB可用SMARTKEY_ADB指定路径。
+
+OCR相关测试要求自行上传合成图片screenshots/fixtures/ocr-chinese.png，并把其MediaStore ID设置为SMARTKEY_OCR_IMAGE_ID。不要使用真实聊天照片代替合成素材。微信入口测试还需根据本人观察设置SMARTKEY_WECHAT_INPUT_X/Y，避免错误点击。脚本不记录UI文本；真实模型测试使用所配置服务，可能消耗额度。
+
+phone_reference_parity_check验证草稿/关系/更多；phone_reference_keyboard_check验证候选/拼音/符号；phone_inline_gallery_check验证合成图OCR与分析；phone_rewrite_cursor_check验证中间光标替换；phone_gallery_selection_check选择后取消；phone_generation_latency_check比较请求与快速切换；phone_wechat_inline_gallery_check检查宿主内预览。涉及本地发送的测试只使用应用试用输入框。
+
+GenerationLatencyInstrumentedTest只有latencyBenchmark=true时才进行真实网络基准，不放入默认测试流程。
